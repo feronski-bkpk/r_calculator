@@ -1,0 +1,17 @@
+import { Calculator } from "calculator.slint";
+
+export component AppWindow inherits Window {
+    in property <string> window_title;
+
+    width: 300px;
+    height: 500px;
+    title: window_title;
+    icon: @image-url("../icons/icon.png");
+    background: Colors.rgba(200,200,200,1);
+    default-font-size: 20px;
+
+    Calculator {
+        width: parent.width;
+        height: parent.height;
+    }
+}
